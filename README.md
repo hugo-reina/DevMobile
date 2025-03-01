@@ -9,9 +9,8 @@ DevMobile est une application permettant de gérer des annonces mobiles. L'appli
 ### Filtre sur la page des favoris
 j'ai ajouté une fonctionnalité de filtre sur la page des favoris. Maintenant, vous pouvez rechercher et filtrer les annonces en favoris en fonction du modèle. Il vous suffit de taper dans le champ de recherche pour affiner la liste des annonces favorites.
 
-## Installation
-
-1. Clonez le repository :
+## Démarer le projet
 
    ```bash
-   git clone https://github.com/username/DevMobile.git
+   npm install
+   npm start
