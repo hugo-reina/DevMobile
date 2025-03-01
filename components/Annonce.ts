@@ -1,3 +1,5 @@
+import { PhoneData } from './PhoneData'; // Si vous avez placé l'interface dans un fichier séparé, ajustez le chemin.
+
 export interface Annonce {
   id: number;
   model: string;
@@ -15,12 +17,12 @@ export interface Annonce {
 }
 export async function getAnnonce(): Promise<Annonce[]> {
   try {
-    const f1 = require('../phone.json'); // Charger le fichier JSON
+    const f1:PhoneData[] = require('../phone.json'); // Charger le fichier JSON
     if (!f1 || !Array.isArray(f1)) {
       throw new Error('Le fichier JSON ne contient pas un tableau `results`');
     }
 
-    return f1.map((value: any) => ({
+    return f1.map((value: PhoneData) => ({
       id: value.id,
       model: value.model,
       constructor: value.constructor,
